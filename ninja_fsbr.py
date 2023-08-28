@@ -17,13 +17,13 @@ from itertools import takewhile
 from pathlib import Path
 
 from django.core.exceptions import ImproperlyConfigured
-from ninja import NinjaAPI
+from ninja import NinjaAPI, Router
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"
 
 
-class NinjaFsbrAPI(NinjaAPI):
-    def __init__(self, *args, views_module, **kwargs):
+class FilesystemBasedRouter(Router):
+    def __init__(self, *args, views_module: str, **kwargs):
         super().__init__(*args, **kwargs)
         self.views_module = views_module
 
