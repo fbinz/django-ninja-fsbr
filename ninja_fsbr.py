@@ -17,9 +17,9 @@ from itertools import takewhile
 from pathlib import Path
 
 from django.core.exceptions import ImproperlyConfigured
-from ninja import NinjaAPI, Router
+from ninja import Router
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 
 class FilesystemBasedRouter(Router):
